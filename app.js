@@ -58,7 +58,7 @@ app.get("/find-largest-remainder/:num1/:num2", (req, res) => {
 });
 
 app.get("/halving-sum-algorithm/:num", (req, res) => {
-  const num = req.params.num;
+  const num = parseInt(req.params.num);
 
   function halvingSum(n) {
     let sum = 0;
