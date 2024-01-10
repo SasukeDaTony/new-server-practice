@@ -41,8 +41,8 @@ app.get("/is-divisible-by-3/:num", (req, res) => {
 });
 
 app.get("/find-largest-remainder/:num1/:num2", (req, res) => {
-  const num1 = parseInt(num1);
-  const num2 = parseInt(num2);
+  const num1 = parseInt(req.params.num1);
+  const num2 = parseInt(req.params.num2);
   // let large = 0;
   // let small = 0
   function remainder(a, b) {
