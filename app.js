@@ -40,4 +40,28 @@ app.get("/is-divisible-by-3/:num", (req, res) => {
   );
 });
 
+app.get("/find-remainder-of-largest-dividend/:num1/:num2", (req, res) => {
+  const num1 = parseInt(num1);
+  const num2 = parseInt(num2);
+  // let large = 0;
+  // let small = 0
+  function remainder(a, b) {
+    // if(a>b) {
+    //     large = a;
+    //     small = b;
+    // } else {
+    //     large = b;
+    //     small = a;
+    // }
+    return a > b ? a % b : b % a;
+  }
+  const result = remainder(num1, num2);
+
+  res.send(
+    `The remainder of ${num1 > num2 ? num1 : num2} divided by ${
+      num1 > num2 ? num2 : num1
+    } is ${result}.`
+  );
+});
+
 module.exports = app;
