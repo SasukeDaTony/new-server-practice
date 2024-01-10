@@ -40,7 +40,7 @@ app.get("/is-divisible-by-3/:num", (req, res) => {
   );
 });
 
-app.get("/find-remainder-of-largest-dividend/:num1/:num2", (req, res) => {
+app.get("/find-largest-remainder/:num1/:num2", (req, res) => {
   const num1 = parseInt(num1);
   const num2 = parseInt(num2);
   // let large = 0;
